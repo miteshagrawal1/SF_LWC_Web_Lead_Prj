@@ -17,9 +17,9 @@ function captchaSuccess(){
     captchaChecked = true;
 }
 
-function checkRequirements(e){
+function checkRequirements(event){
     if(captchaChecked == false){
         alert('check recaptcha box');
-        e.preventDefault();
+        event.preventDefault();
     }
 }

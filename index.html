@@ -1,71 +1,73 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web to Lead Form</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <form
-      action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgK00000Qov0v"
-      method="POST"
-      onsubmit="checkRequirements(e)"
-    >
-    <input type=hidden name='captcha_settings' value='{"keyname":"w_l_recaptcha","fallback":"true","orgId":"00DgK00000Qov0v","ts":""}'>
-      <input type="hidden" name="oid" value="00DgK00000Qov0v" />
-      <input type="hidden" name="retURL" value="https://miteshagrawal1.github.io/SF_LWC_Web_Lead_Prj/thanks.html" />
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Web to Lead Form</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+      
+    </head>
+    <body>
+        <form
+        action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgK00000Qov0v"
+        method="POST"
+        onsubmit="checkRequirements(event)"
+        >
+        <input type=hidden name='captcha_settings' value='{"keyname":"w_l_recaptcha","fallback":"true","orgId":"00DgK00000Qov0v","ts":""}'>
+        <input type="hidden" name="oid" value="00DgK00000Qov0v" />
+        <input type="hidden" name="retURL" value="https://miteshagrawal1.github.io/SF_LWC_Web_Lead_Prj/thanks.html" />
 
-      <label for="first_name">First Name</label
-      ><input
-        id="first_name"
-        maxlength="40"
-        name="first_name"
-        size="20"
-        type="text"
-        required="true"
-      /><br />
+        <label for="first_name">First Name</label
+        ><input
+            id="first_name"
+            maxlength="40"
+            name="first_name"
+            size="20"
+            type="text"
+            required="true"
+        /><br />
 
-      <label for="last_name">Last Name</label
-      ><input
-        id="last_name"
-        maxlength="80"
-        name="last_name"
-        size="20"
-        type="text"
-        required="true"
-      /><br />
+        <label for="last_name">Last Name</label
+        ><input
+            id="last_name"
+            maxlength="80"
+            name="last_name"
+            size="20"
+            type="text"
+            required="true"
+        /><br />
 
-      <label for="email">Email</label
-      ><input
-        id="email"
-        maxlength="80"
-        name="email"
-        size="20"
-        type="text"
-        required="true"
-      /><br />
+        <label for="email">Email</label
+        ><input
+            id="email"
+            maxlength="80"
+            name="email"
+            size="20"
+            type="text"
+            required="true"
+        /><br />
 
-      <label for="city">City</label
-      ><input
-        id="city"
-        maxlength="40"
-        name="city"
-        size="20"
-        type="text"
-        required="true"
-      /><br />
+        <label for="city">City</label
+        ><input
+            id="city"
+            maxlength="40"
+            name="city"
+            size="20"
+            type="text"
+            required="true"
+        /><br />
 
-      <input
-        type="hidden"
-        id="lead_source"
-        name="lead_source"
-        value="Web"
-      /><br />
-        <div class="g-recaptcha" data-sitekey="6Lc6rt8tAAAAAOHaQsYEqW4Yg7UaqDPsEzHwg4je" data-callback="captchaSuccess"></div><br>
-      <input type="submit" name="submit" />
-    </form>
-  </body>
-</html>
+        <input
+            type="hidden"
+            id="lead_source"
+            name="lead_source"
+            value="Web"
+        /><br />
+            <div class="g-recaptcha" data-sitekey="6Lc6rt8tAAAAAOHaQsYEqW4Yg7UaqDPsEzHwg4je" data-callback="captchaSuccess"></div><br>
+        <input type="submit" name="submit" />
+        </form>
+           <script src="script.js"></script>
+    </body>
+   
+    </html>
