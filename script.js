@@ -10,3 +10,16 @@ function timestamp() {
   }
 }
 setInterval(timestamp, 500);
+
+
+let captchaChecked = false;
+function captchaSuccess(){
+    captchaChecked = true;
+}
+
+function checkRequirements(e){
+    if(captchaChecked == false){
+        alert('check recaptcha box');
+        e.preventDefault();
+    }
+}
